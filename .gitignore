@@ -1,0 +1,18 @@
+# Raw dataset — too large for GitHub (~3.5 GB), CC BY-NC licensed. Download separately.
+UAH-DRIVESET-v1/
+UAH-DRIVESET-v1.zip
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

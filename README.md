@@ -80,6 +80,20 @@ Folder names encode: recording datetime, distance (km), driver ID, driving style
 
 ---
 
+## Code
+
+| File | What it does |
+|---|---|
+| `uah_driveset.py` | Loader: `list_trips()`, `load_trip()`, `load_summaries()` read every trip file into named pandas tables |
+| `notebooks/01_explore_data.ipynb` | Step 1: dataset overview, Normal vs Aggressive vs Drowsy plots, baseline accuracy of the app's own ratios |
+
+Requirements: `pip install pandas numpy matplotlib jupyter`
+
+Accelerometer axes (Kalman-filtered columns, checked against labelled events):
+`acc_z_kf` = forward (braking is negative), `acc_y_kf` = sideways (turning), `acc_x_kf` = vertical.
+
+---
+
 ## Caveats
 
 - **License:** UAH-DriveSet is **Creative Commons BY-NC 4.0** — personal and

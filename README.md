@@ -86,6 +86,9 @@ Folder names encode: recording datetime, distance (km), driver ID, driving style
 |---|---|
 | `uah_driveset.py` | Loader: `list_trips()`, `load_trip()`, `load_summaries()` read every trip file into named pandas tables |
 | `notebooks/01_explore_data.ipynb` | Step 1: dataset overview, Normal vs Aggressive vs Drowsy plots, baseline accuracy of the app's own ratios |
+| `event_detection.py` | Step 2: threshold-based detector for braking / acceleration / turning events, plus matching and scoring against the app's `EVENTS_INERTIAL` |
+| `notebooks/02_event_detection.ipynb` | Step 2: our detector vs the app (tuned on D1–D3, tested on D4–D6), per-trip event rates by driving style |
+| `results/step2_trip_events.csv` | Step 2 output: our harsh-event rates per 10 km for every trip (features for later steps) |
 
 Requirements: `pip install pandas numpy matplotlib jupyter`
 

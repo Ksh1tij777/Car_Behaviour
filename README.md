@@ -92,6 +92,9 @@ Folder names encode: recording datetime, distance (km), driver ID, driving style
 | `behaviour_features.py` | Step 3: speeding (% time >10% over the OSM limit), tailgating (% time <0.5 s behind the car ahead), drifting (% time >0.5 m off lane centre), weaving (drift-and-correct per minute), lane changes per 10 km |
 | `notebooks/03_behaviour_features.ipynb` | Step 3: how each rule was chosen, Normal vs Drowsy vs Aggressive, agreement with the app's scores |
 | `results/step3_trip_features.csv` | Step 3 output: all Step 2 + Step 3 features, one row per trip |
+| `scoring.py` | Step 4: 7 behaviour scores out of 100 (100 up to an allowance, then the score halves every `half_at` units of risk) and the overall trip score |
+| `notebooks/04_scores.ipynb` | Step 4: fitting the score curves on D1–D3, comparison with the app's scores on D4–D6, scores by driving style, report cards |
+| `results/step4_trip_scores.csv` | Step 4 output: our 7 scores + overall score for every trip |
 
 Requirements: `pip install pandas numpy matplotlib jupyter`
 

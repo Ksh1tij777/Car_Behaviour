@@ -89,6 +89,9 @@ Folder names encode: recording datetime, distance (km), driver ID, driving style
 | `event_detection.py` | Step 2: threshold-based detector for braking / acceleration / turning events, plus matching and scoring against the app's `EVENTS_INERTIAL` |
 | `notebooks/02_event_detection.ipynb` | Step 2: our detector vs the app (tuned on D1–D3, tested on D4–D6), per-trip event rates by driving style |
 | `results/step2_trip_events.csv` | Step 2 output: our harsh-event rates per 10 km for every trip (features for later steps) |
+| `behaviour_features.py` | Step 3: speeding (% time >10% over the OSM limit), tailgating (% time <0.5 s behind the car ahead), drifting (% time >0.5 m off lane centre), weaving (drift-and-correct per minute), lane changes per 10 km |
+| `notebooks/03_behaviour_features.ipynb` | Step 3: how each rule was chosen, Normal vs Drowsy vs Aggressive, agreement with the app's scores |
+| `results/step3_trip_features.csv` | Step 3 output: all Step 2 + Step 3 features, one row per trip |
 
 Requirements: `pip install pandas numpy matplotlib jupyter`
 

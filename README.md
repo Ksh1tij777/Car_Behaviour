@@ -98,6 +98,9 @@ Folder names encode: recording datetime, distance (km), driver ID, driving style
 | `classifier.py` | Step 5: two risk indexes (aggressive_risk, drowsy_risk), the two-line rule, and leave-one-driver-out testing for the rule and scikit-learn models |
 | `notebooks/05_classification.ipynb` | Step 5: predicting Normal / Drowsy / Aggressive for unseen drivers: app 36/40, our rule 39/40, logistic regression and random forest 40/40 |
 | `results/step5_predictions.csv` | Step 5 output: risk indexes and predictions for every trip |
+| `safety_score.py` | Step 6: 300–900 safety score (300 + 12 × (overall score − 50)), bands (Excellent 750+, Good 650+, Average 550+, Risky), points lost per behaviour as reasons, distance-weighted driver score, premium change |
+| `notebooks/06_safety_score.ipynb` | Step 6: every normal trip scores above every drowsy/aggressive trip; report cards with reasons; per-driver scores; "what if" mixing; premium example |
+| `results/step6_trip_safety_scores.csv`, `results/step6_driver_scores.csv` | Step 6 output: safety score, band and reasons per trip; per-driver scores in each driving style |
 
 Requirements: `pip install pandas numpy matplotlib jupyter`
 
